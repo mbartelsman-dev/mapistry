@@ -1,12 +1,19 @@
 # Mapistry
 
-A tool for generating realistic fictional maps, taking a procedural approach to generation.
+Inspired by [Fractal Terrains][ft3], [Wilbur][wilbur], and [Martin O'Leary's Generating Fantasy Map Generator][mapgen], Mapistry aims to be a global and local map generation tool capable of creating realistic terrain for the globe or a region of it, while leveraging modern technologies.
 
-Mapistry aims to be a robust and realistic tool that employs simplified models of known natural phenomena, such as plate tectonics, weather patterns, and erosion, to generate realistic worlds, while at the same time giving the user some degree of freedom to control the final output.
+## Goals
 
-Because of the inherent size and complexity of the project, Mappistry cannot reasonably be a monolithic application. Instead, it will be a modular set of tools that can be piped together to achieve the desired results.
+### Speed
 
-The starting goal for Mappistry is to replicate the functionality that Martin O'Leary describes in his article [Generating Fantasy Maps](http://mewo2.com/notes/terrain/). That is, a tool that can generate a realistically eroded map of a small region with square coordinates, as well as simple cultural features. Further developments after that point remain to be seen. One avenue that may be explored is to take the generation algorithm and adapt it to an entire globe, woth the possibility of plate tectonics simulation. A different avenue would be to implement a more complete and interactive cultural simulation. These goals are not necessarily mutually exclusive.
+Wilbur and Fractal Terrains are powerful tools, but they are extremely slow due to the lack of paralelization. GPU computing libraries could be leveraged to perform the most intensive calculations, such as erosion. In this regard, using the threading facilities provided by modern programming languages should already provide a noticeable improvement. And using technologies such as OpenCL for GPU computing should make the process orders of magnitude faster.
+
+- Integration. Use of open formats that can be reused with external tools. Particularly integration with GIS.
+- Scalability. Mapistry should be capable of handling maps at large and small scales while remaining mini
 
 - [ ] World visualization  
 The first step is to make a tool capable of visualizing the world
+
+[ft3]: https://www.profantasy.com/products/ft.asp
+[wilbur]: http://www.fracterra.com/wilbur.html
+[mapgen]: http://mewo2.com/notes/terrain/
