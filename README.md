@@ -13,18 +13,28 @@ Wilbur and Fractal Terrains are powerful tools, but they are extremely slow due 
 
 ### Overview
 
+Note: World in this context is used to refer to the region of interest being mapped.
+
 - Must haves
-  - World loading
-  - World saving
-  - World erosion
+  - World generation: User must be able to generate a world that they can use as a starting point in the program
+  - World erosion: User must be able to perform erosion operations on the current world
+  - World visualization: User must be able to visualize the current state of the world
+  - World loading: User must be able to load world data that's been stored in the filesystem or (potentially) online
+  - World saving: User must be able to save their generated world into their filesystem or (potentially) online
 
 - Should haves
-  - Live world visualization
+  - Parameterized erosion: User should be able to fine-tune the erosion process to achieve desired results
+  - Dynamic visualization: User should be able to pan, zoom, and rotate their world-view
+  - Cultural feature generation: Users should be able to proceduraly generate a set of cities based on desirability parameters
 
 - Could haves
-  - Processing world visualization
+  - Parameter mask: User should be able to load bitmap masks and tie them to their parameters
+  - Sample visualization: User could be able to see a small rendered sample of the world prior to confirming any changes
+  - Undo/Redo: User could have the option to undo or redo the last few states of the world
+  - Climate generation: Users should be able to procedurally generate the climate of their world given a set of parameters
 
 - Would haves
+  - Processing world visualization: User would able to see the effects of different processess as they are generated
 
 ### World Erosion
 
